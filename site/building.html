@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <title>POJOs in Action - </title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+      </head>
+  <body class="composite">
+    <div id="banner">
+                    <span id="bannerLeft">
+    
+            POJOs in Action
+    
+            </span>
+                    <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+  
+  
+            <div class="xleft">
+        Last Published: 06/27/2006
+                      </div>
+            <div class="xright">      <a href="http://www.pojosinaction.com">My website</a>
+          |
+          <a href="http://chris-richardson.blog-city.com">My blog</a>
+          |
+          <a href="http://www.manning.com/crichardson/">The book</a>
+          
+  
+
+  
+    
+  
+  
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+  
+  
+                   <h5>POJOs in Action</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="index.html">Introduction</a>
+        </li>
+              
+    <li class="none">
+              <a href="download.html">Download</a>
+        </li>
+              
+    <li class="none">
+              <strong>Building</strong>
+        </li>
+              
+    <li class="none">
+              <a href="help.html">Help</a>
+        </li>
+          </ul>
+          <h5>Navigate the source code</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="byChapter.html">By chapter</a>
+        </li>
+              
+    <li class="none">
+              <a href="byModule.html">By module</a>
+        </li>
+          </ul>
+                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+  
+  
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <div class="section"><h2>Building the POJOs in Action examples</h2><p>To make building the samples easy and to avoid having to distribute the dependencies, I decided to use maven2. If you haven't used maven before, it might seem a little daunting, but once maven is setup correctly (which is easy to do) it will download the required jars, compile the examples and run the tests It will also generate eclipse project/classpath files and an ant build script.</p><p>You will also need Java 5, although the dependencies on it are minimal (except for the EJB 3 example) and if I get enough emails I will look into getting it to compile with Java 1.4.</p><p>And, for the EJB 3 example, you need the JBoss Embeddable EJB3 implementation.</p><p>To get setup please follow these steps:</p><ol type="1"><li>Download maven2 and install it.</li><li>Add Sun jars to the maven2 repository.</li><li>Run 'mvn install' to compile and test the examples.</li><li>Run 'mvn eclipse:eclipse' to generate eclipse .classpath and .project files</li><li>Build the EJB 3 projects</li></ol><p>Let's look at the details</p></div><div class="section"><h2>1. Installing Maven2</h2><p>The first step is to install Maven 2.0.1. You can get it from here: <a href="http://maven.apache.org/download.html">http://maven.apache.org/download.html</a></p><ol type="1"><li>Download and unzip it into a directory</li><li>set an environment variable M2_HOME to point to that directory. On windows: set M2_HOME=<i>dir</i>. On Unix: export M2=<i>dir</i>.</li><li>Add M2_HOME/bin to your PATH</li><li>Ensure that the environment variable JAVA_HOME points to a JDK 5 installation</li><li>Running 'mvn --version' should print 'Maven version: 2.0.1'</li><li>I also found it necessary to increase the size of the Perm space using <ul><li>One windows: set MAVEN_OPTS=-XX:PermSize=128m -mx300m</li><li>On UNIX something like: export MAVEN_OPTS=&quot;-XX:PermSize=128m -mx300m&quot;</li></ul></li></ol><p>For more information please the <a href="http://maven.apache.org/download.html#installation"> installation instructions</a> and <a href="http://maven.apache.org/guides/getting-started/index.html">getting started with Maven</a>.</p></div><div class="section"><h2>2. Adding the sun jars to the maven2 repository</h2><p>Maven will automatically download almost all jars from ibiblio.com and put them in a local repository, which is a directory hierarchy that is usually in your home directory. Once the jars are in the local repository they can be used for compilation and running tests. However, Sun's licensing prevents certain J2EE jars such as jta.jar from being downloaded from ibiblio.com . This means that you must first download them and then add them to the repository using a maven command.</p><p>To simplify this process, there is a windows script addj2eejars.cmd script in the toplevel directory. Edit this script to point to the correct location of the jars and run it. It will then add those jars to the repository. The UNIX/Linux version would be very similar.</p><p>For more information see <a href="http://maven.apache.org/guides/mini/guide-coping-with-sun-jars.html">coping with Sun Jars</a> for the details.</p></div><div class="section"><h2>3. Compiling and testing the examples</h2><p>Now that you have correctly installed maven2 and added the Sun jars to the repository, you can type 'mvn install'. Maven will then download all the jars, compile the examples and run the tests. It will also build the jars and put them in the local repository, which is necessary when generating the eclipse files. Sit back and relax while maven downloads numerous files from ibiblio (this only happens the first time). Hopefully, this should work without a problem. :-) Note: maven will print some harmless warnings about artifacts being relocated.</p><p>Some common problems include:</p><ul><li>Network connectivity - sometimes maven encounters a network glitch that prevents it from download a file. The fix is to run the command again. Also, if you must access the internet using a proxy then please see <a href="http://maven.apache.org/guides/mini/guide-proxies.html">Configuring a proxy</a>.</li><li>The repository has changes - sometimes the maven2 repository changes (!), which requires updates to the build files (pom.xml). I will publish updated pom.xml files when this happens.</li><li>The build seems to hang - make sure you increased the size of perm space</li></ul></div><div class="section"><h2>4. Setting up eclipse</h2><p>One of the really neat things about maven is that it will automatically generate Eclipse .project and .classpath file, which you can then import.</p><p>To do this, you must do the following:</p><ol type="1"><li>Run the command 'mvn eclipse:eclipse' to generate the files</li><li>Run the command 'mvn -Declipse.workspace=<i>path-to-eclipse-workspace</i> eclipse:add-maven-repo' to tell Eclipse about the repository. Specifically, it sets the M2_REPO classpath variable to point to the repository. You can also create this classpath variable manually inside eclipse: windows-&gt;preferences-&gt;java-&gt;build path-&gt;class path variables. Select New, enter the name M2_REPO and specify the path to the repository. On windows the repository is usually c:\Documents and Settings&lt;your name&gt;\.m2\repository\. On UNIX the repository is typically ~/.m2/repository. </li></ol><p>Maven should now have generated the .classpath and .project files in each of the subdirectories.</p><p>For more information please <a href="http://maven.apache.org/guides/mini/guide-ide-eclipse.html">Guide to using Eclipse with Maven 2.x</a>.</p><p>Maven also supports IDEA but I haven't tried this feature. See <a href="http://maven.apache.org/guides/mini/guide-ide-idea.html">Using IDEA with Maven 2.x</a> for the details.</p></div><div class="section"><h2>5. Compiling the EJB 3 examples</h2><p>The EJB 3 examples (pia-ch-10-ejb3-*) are not built during the regular build process. This is because the required JARs (JBoss Embeddedable EJB3 Alpha 3) are not available from ibiblio. To build the EJB 3 examples please follow these steps:</p><ol type="1"><li>Download and unzip <a href="http://www.jboss.com/products/list/downloads#ejb3">JBoss Embeddable EJB3 Alpha 3</a></li><li>Edit the script pia-ch-10-ejb3/installejb3jars.cmd to point at the JARs you just downloaded and run it to add those jars to the repository.</li><li>Uncomment the ejb3 entries in pom.xml</li><li>Run 'mvn install eclipse:eclipse' to build and compile the EJB3 examples and generate the relevant eclipse files. Ignore the warnings about not being able to download the poms - this is a bug in maven 2.0</li><li>Import the newly generated projects into eclipse</li><li>Test the domain model and pure EJB3 example by running Chapter10EJB3AllTests</li><li>In order to test the integrated EJB3/Spring dependency injection you must follow these steps:<ol type="a"><li>Deploy the EJB3 Jar pia-ch-10-ejb3/target/pia-ejb3.ejb3</li><li>Deploy the EJB3 Jar pia-ch-10-ejb3-spring-di/target/pia-ejb3.ejb3</li><li>Run InitializeDB to populate the in-server HSQLDB database</li><li>Run Chapter10EJB3IntegratedSpringDIAllTests</li></ol></li></ol></div>
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2006
+    
+          
+  
+
+  
+    
+  
+  
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

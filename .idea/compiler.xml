@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ormunit-hibernate" />
+        <module name="ormunit-ibatis" />
+        <module name="pia-ch-01-banking-example" />
+        <module name="pia-ch-03-domain-model" />
+        <module name="pia-ch-06-hibernate" />
+        <module name="pia-ch-07-pojo-facade" />
+        <module name="pia-ch-07-pojo-facade-hibernate" />
+        <module name="pia-ch-08-exposed-hibernate" />
+        <module name="pia-ch-09-transaction-scripts" />
+        <module name="pia-ch-11-queries-domain" />
+        <module name="pia-ch-11-queries-hibernate" />
+        <module name="pia-ch-11-queries-ibatis" />
+        <module name="pia-ch-12-concurrency-domain" />
+        <module name="pia-ch-12-concurrency-hibernate" />
+        <module name="pia-ch-12-concurrency-transaction-script" />
+        <module name="pia-ch-13-ibatis-lock-manager" />
+        <module name="pia-ch-13-offline-locking-domain" />
+        <module name="pia-ch-13-offline-locking-hibernate" />
+        <module name="pia-util" />
+        <module name="pia-util-spring" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="ormunit-hibernate" target="1.5" />
+      <module name="ormunit-ibatis" target="1.5" />
+      <module name="pia" target="1.5" />
+      <module name="pia-ch-01-banking-example" target="1.5" />
+      <module name="pia-ch-03-domain-model" target="1.5" />
+      <module name="pia-ch-06-hibernate" target="1.5" />
+      <module name="pia-ch-07-pojo-facade" target="1.5" />
+      <module name="pia-ch-07-pojo-facade-hibernate" target="1.5" />
+      <module name="pia-ch-08-exposed-hibernate" target="1.5" />
+      <module name="pia-ch-09-transaction-scripts" target="1.5" />
+      <module name="pia-ch-11-queries-domain" target="1.5" />
+      <module name="pia-ch-11-queries-hibernate" target="1.5" />
+      <module name="pia-ch-11-queries-ibatis" target="1.5" />
+      <module name="pia-ch-12-concurrency-domain" target="1.5" />
+      <module name="pia-ch-12-concurrency-hibernate" target="1.5" />
+      <module name="pia-ch-12-concurrency-transaction-script" target="1.5" />
+      <module name="pia-ch-13-ibatis-lock-manager" target="1.5" />
+      <module name="pia-ch-13-offline-locking-domain" target="1.5" />
+      <module name="pia-ch-13-offline-locking-hibernate" target="1.5" />
+      <module name="pia-util" target="1.5" />
+      <module name="pia-util-spring" target="1.5" />
+      <module name="shared-spring-hibernate" target="1.5" />
+      <module name="shared-spring-ibatis" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

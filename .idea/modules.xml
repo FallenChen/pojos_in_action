@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ormunit-hibernate/ormunit-hibernate.iml" filepath="$PROJECT_DIR$/ormunit-hibernate/ormunit-hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ormunit-ibatis/ormunit-ibatis.iml" filepath="$PROJECT_DIR$/ormunit-ibatis/ormunit-ibatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia.iml" filepath="$PROJECT_DIR$/pia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-ch-01-banking-example/pia-ch-01-banking-example.iml" filepath="$PROJECT_DIR$/pia-ch-01-banking-example/pia-ch-01-banking-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-ch-03-domain-model/pia-ch-03-domain-model.iml" filepath="$PROJECT_DIR$/pia-ch-03-domain-model/pia-ch-03-domain-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-ch-06-hibernate/pia-ch-06-hibernate.iml" filepath="$PROJECT_DIR$/pia-ch-06-hibernate/pia-ch-06-hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-ch-07-pojo-facade/pia-ch-07-pojo-facade.iml" filepath="$PROJECT_DIR$/pia-ch-07-pojo-facade/pia-ch-07-pojo-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-ch-07-pojo-facade-hibernate/pia-ch-07-pojo-facade-hibernate.iml" filepath="$PROJECT_DIR$/pia-ch-07-pojo-facade-hibernate/pia-ch-07-pojo-facade-hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-ch-08-exposed-hibernate/pia-ch-08-exposed-hibernate.iml" filepath="$PROJECT_DIR$/pia-ch-08-exposed-hibernate/pia-ch-08-exposed-hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-ch-09-transaction-scripts/pia-ch-09-transaction-scripts.iml" filepath="$PROJECT_DIR$/pia-ch-09-transaction-scripts/pia-ch-09-transaction-scripts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-ch-11-queries-domain/pia-ch-11-queries-domain.iml" filepath="$PROJECT_DIR$/pia-ch-11-queries-domain/pia-ch-11-queries-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-ch-11-queries-hibernate/pia-ch-11-queries-hibernate.iml" filepath="$PROJECT_DIR$/pia-ch-11-queries-hibernate/pia-ch-11-queries-hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-ch-11-queries-ibatis/pia-ch-11-queries-ibatis.iml" filepath="$PROJECT_DIR$/pia-ch-11-queries-ibatis/pia-ch-11-queries-ibatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-ch-12-concurrency-domain/pia-ch-12-concurrency-domain.iml" filepath="$PROJECT_DIR$/pia-ch-12-concurrency-domain/pia-ch-12-concurrency-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-ch-12-concurrency-hibernate/pia-ch-12-concurrency-hibernate.iml" filepath="$PROJECT_DIR$/pia-ch-12-concurrency-hibernate/pia-ch-12-concurrency-hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-ch-12-concurrency-transaction-script/pia-ch-12-concurrency-transaction-script.iml" filepath="$PROJECT_DIR$/pia-ch-12-concurrency-transaction-script/pia-ch-12-concurrency-transaction-script.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-ch-13-ibatis-lock-manager/pia-ch-13-ibatis-lock-manager.iml" filepath="$PROJECT_DIR$/pia-ch-13-ibatis-lock-manager/pia-ch-13-ibatis-lock-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-ch-13-offline-locking-domain/pia-ch-13-offline-locking-domain.iml" filepath="$PROJECT_DIR$/pia-ch-13-offline-locking-domain/pia-ch-13-offline-locking-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-ch-13-offline-locking-hibernate/pia-ch-13-offline-locking-hibernate.iml" filepath="$PROJECT_DIR$/pia-ch-13-offline-locking-hibernate/pia-ch-13-offline-locking-hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-util/pia-util.iml" filepath="$PROJECT_DIR$/pia-util/pia-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pia-util-spring/pia-util-spring.iml" filepath="$PROJECT_DIR$/pia-util-spring/pia-util-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shared-spring-hibernate/shared-spring-hibernate.iml" filepath="$PROJECT_DIR$/shared-spring-hibernate/shared-spring-hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shared-spring-ibatis/shared-spring-ibatis.iml" filepath="$PROJECT_DIR$/shared-spring-ibatis/shared-spring-ibatis.iml" />
+    </modules>
+  </component>
+</project>

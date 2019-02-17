@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pia-ch-08-exposed-hibernate:war">
+    <output-path>$PROJECT_DIR$/pia-ch-08-exposed-hibernate/target</output-path>
+    <root id="archive" name="pia-ch-08-exposed-hibernate-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="pia-ch-08-exposed-hibernate:war exploded" />
+    </root>
+  </artifact>
+</component>
